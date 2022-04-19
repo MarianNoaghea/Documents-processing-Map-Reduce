@@ -1,0 +1,3 @@
+Timp de start: vineri 3 decembrie 2021, 17:07:02 +0200
+V1.0
+Se ruleaza testul 0 cu 1 worker(i)

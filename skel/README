@@ -1,0 +1,34 @@
+Noaghea Marian-Florentin 333CC
+
+User:
+Am creeat o clasa User care contine: numele fisierelor si un Coordonator.
+
+Coordinator:
+Clasa Coordonator contine date utile impartirii taskuri pentru operatiile de Map si Reduce.
+Printre cele mai importate componente clasa contine un Array de MapTask, un Array de FinalResult.
+Cu metoda coordinate() se impart indecsi pentru fiecare MapTask (index de start si de end),
+acestia fiind recalibrati in functie de conditia de netrunchiere a cuvintelor.
+
+MapTask:
+Contine indecsi de start si de stop si un MapTaskResult.
+
+MapTaskResult:
+Contine un element File, un HashMap si cuvantul maxim din fisier.
+
+Pentru paralelizarea operatiilor de Map si Reduce am folosit ExecutorService.
+
+MyRunnableMap:
+Fiecare thread va prelua un MapTask, si parcurge de la indexul de start pana la indexul de stop,
+retinand lungimile si frecventele cuvintelor dar si cuvantul de lungime maxima, acestea fiind
+retinute in MapTaskResult mai devreme mentionat.
+
+MyRunnableRedcue:
+Pentru fiecare fisier parcurg hashmapul si retin si cuvantul maximal si frecventa lui. Pentru o
+mai buna eficienta am creeat un vector "fibonacci" pentru accesa valoarea dorita din sir.
+Rezultatele se salveaza in Arrayul de FinalResult.
+
+Pentru asteptarea terminarii taskurilor inainte de a trece la urmatoarea etapa am folosit
+awaitTermination.
+
+Tema a fost relativ simpla, sper ca am respectat pe cat posibil pasii conform specificatiilor.
+Timp de realizare: aprox 8 ore.
